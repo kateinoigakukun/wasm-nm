@@ -1,0 +1,1 @@
+add_executable(wasm-nm driver.cpp)

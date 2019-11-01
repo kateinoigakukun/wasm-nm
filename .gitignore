@@ -1,0 +1,15 @@
+### https://raw.github.com/github/gitignore/042be9dc99df945d78c0b66306b92142bb09109c/CMake.gitignore
+
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+
