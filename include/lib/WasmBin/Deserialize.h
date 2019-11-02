@@ -16,7 +16,7 @@ public:
 
     Section *deserializeSection();
     CustomSection *deserializeCustomSection(uint32_t size);
-    
+    std::vector<WasmSymbolInfo> deserializeSymbolTable();
 
 
     uint64_t deserializeVarUint64();

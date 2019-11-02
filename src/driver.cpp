@@ -24,6 +24,13 @@ int main(int argc, char *argv[]) {
             {
                 auto customSection = static_cast<WasmBin::CustomSection*>(*it);
                 std::cout << customSection->name << std::endl;
+                if(customSection->name != "linking") break;
+                auto linkingSection = static_cast<WasmBin::LinkingSection *>(customSection);
+                auto table = linkingSection->data.SymbolTable;
+                for(auto sym = std::begin(table); sym != std::end(table); ++sym) {
+                    if((*sym).Name == "") continue;
+                    std::cout << (*sym).Name << std::endl;
+                }
                 break;
             }
             default:

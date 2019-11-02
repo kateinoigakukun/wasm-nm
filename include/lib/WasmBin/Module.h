@@ -45,6 +45,8 @@ public:
 class LinkingSection: public CustomSection
 {
 public:
+    LinkingSection(LinkingData data)
+    : CustomSection("linking", std::vector<char>()), data(data) { }
     LinkingData data;
 };
 

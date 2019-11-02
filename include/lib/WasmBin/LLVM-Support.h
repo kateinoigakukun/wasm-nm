@@ -38,4 +38,22 @@ struct LinkingData
     std::vector<WasmSymbolInfo> SymbolTable;
 };
 
+const unsigned WASM_SYMBOL_UNDEFINED = 0x10;
+const unsigned WASM_SYMBOL_EXPLICIT_NAME = 0x40;
+
+
+enum : unsigned {
+  WASM_SEGMENT_INFO = 0x5,
+  WASM_INIT_FUNCS = 0x6,
+  WASM_COMDAT_INFO = 0x7,
+  WASM_SYMBOL_TABLE = 0x8,
+};
+
+enum WasmSymbolType : unsigned {
+  WASM_SYMBOL_TYPE_FUNCTION = 0x0,
+  WASM_SYMBOL_TYPE_DATA = 0x1,
+  WASM_SYMBOL_TYPE_GLOBAL = 0x2,
+  WASM_SYMBOL_TYPE_SECTION = 0x3,
+  WASM_SYMBOL_TYPE_EVENT = 0x4,
+};
 }
